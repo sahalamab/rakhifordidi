@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Best Pictures Clicked By Me 📸</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<main class="page">
+
+<div class="eyebrow">
+📸 TOTALLY SERIOUS PHOTOGRAPHY
+</div>
+
+<h1>
+Best Pictures <span>Clicked By Me</span>
+</h1>
+
+<p class="lead" id="photoIntro">
+I spent a lot of time selecting these. Probably. 😂
+</p>
+
+
+<section id="prankGallery" class="photo-grid">
+
+<figure class="photo-card">
+
+<img src="images/funny1.jpeg"
+     alt="Funny photo 1">
+
+<figcaption>
+Absolutely stunning. 🤌
+</figcaption>
+
+</figure>
+
+
+<figure class="photo-card">
+
+<img src="images/funny2.jpeg"
+     alt="Funny photo 2">
+
+<figcaption>
+National Geographic called. 😂
+</figcaption>
+
+</figure>
+
+
+<figure class="photo-card">
+
+<img src="images/funny3.jpeg"
+     alt="Funny photo 3">
+
+<figcaption>
+This belongs in a museum.
+</figcaption>
+
+</figure>
+
+</section>
+
+
+<section id="reveal" class="reveal hidden">
+
+<div class="reveal-emoji">
+😂
+</div>
+
+<h2>
+JUST KIDDING!
+</h2>
+
+<p>
+You really thought I was going to put those online? 😭
+</p>
+
+</section>
+
+
+<section id="realGallery"
+         class="hidden">
+
+<div class="section-heading">
+
+<span>❤️</span>
+
+<h2>
+Okay, THESE are the real ones.
+</h2>
+
+<p>
+Actual memories clicked by me.
+</p>
+
+</div>
+
+
+<div class="photo-grid">
+
+
+<figure class="photo-card">
+
+<img src="images/real1.jpeg"
+alt="Memory 1">
+
+</figure>
+
+
+<figure class="photo-card">
+
+<img src="images/real2.jpeg"
+alt="Memory 2">
+
+</figure>
+
+
+<figure class="photo-card">
+
+<img src="images/real3.jpeg"
+alt="Memory 3">
+
+</figure>
+
+
+<figure class="photo-card">
+
+<img src="images/real4.jpeg"
+alt="Memory 4">
+
+</figure>
+
+
+</div>
+
+</section>
+
+
+<div class="actions">
+
+<a class="btn ghost"
+href="report.html">
+
+← Back
+
+</a>
+
+
+<a class="btn primary"
+href="childhood.html">
+
+Next Memory →
+
+</a>
+
+</div>
+
+</main>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+setTimeout(() => {
+
+  document
+  .getElementById("prankGallery")
+  .classList
+  .add("fade-out");
+
+
+  setTimeout(() => {
+
+    document
+    .getElementById("prankGallery")
+    .classList
+    .add("hidden");
+
+
+    document
+    .getElementById("photoIntro")
+    .textContent =
+    "Okay... now for the actual good stuff. ❤️";
+
+
+    document
+    .getElementById("reveal")
+    .classList
+    .remove("hidden");
+
+
+    setTimeout(() => {
+
+      document
+      .getElementById("reveal")
+      .classList
+      .add("show");
+
+
+      setTimeout(() => {
+
+        document
+        .getElementById("realGallery")
+        .classList
+        .remove("hidden");
+
+
+        document
+        .getElementById("realGallery")
+        .classList
+        .add("reveal-in");
+
+
+        burstConfetti(55);
+
+      },1200);
+
+    },50);
+
+  },650);
+
+},4000);
+
+</script>
+
+</body>
+</html>

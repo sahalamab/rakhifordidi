@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>One Last Surprise 🎁</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<main class="page surprise-page">
+
+
+<div id="beforeSurprise">
+
+<div class="big-emoji">
+🎁
+</div>
+
+
+<div class="eyebrow">
+
+ONE LAST SURPRISE
+
+</div>
+
+
+<h1>
+
+Okay Didi...
+
+</h1>
+
+
+<p class="lead">
+
+This one is especially for you.
+
+</p>
+
+
+<button
+class="btn primary"
+id="surpriseBtn">
+
+Open Surprise
+
+</button>
+
+</div>
+
+
+
+<div id="nameReveal"
+class="name-reveal hidden">
+
+
+<div class="eyebrow">
+
+🚨 YOU HAVE BEEN WARNED 🚨
+
+</div>
+
+
+<div class="dramatic-name">
+
+SIDDHIKAAAAAA!!!
+
+</div>
+
+
+<p class="lead">
+
+YES. I SAID YOUR NAME. 😂
+
+</p>
+
+
+<p>
+
+I know you don't like it
+when I call you by your name...
+
+</p>
+
+
+<p>
+
+So obviously, I had to put it
+in the website. 😌
+
+</p>
+
+
+<button
+class="btn primary"
+onclick="window.location.href='final.html'">
+
+Okay Okay, Continue →
+
+</button>
+
+</div>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+document
+.getElementById("surpriseBtn")
+.addEventListener("click", () => {
+
+document
+.getElementById("beforeSurprise")
+.classList
+.add("hidden");
+
+
+document
+.getElementById("nameReveal")
+.classList
+.remove("hidden");
+
+
+document
+.getElementById("nameReveal")
+.classList
+.add("show");
+
+
+burstConfetti(70);
+
+});
+
+</script>
+
+
+</body>
+
+</html>
